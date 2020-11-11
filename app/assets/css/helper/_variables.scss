@@ -1,0 +1,31 @@
+// color
+$red: #55121d !default;
+$deep-red: #341210 !default;
+$dec-text: #a2826e !default;
+
+$gold: #dbc089 !default;
+$gold-lt: #dbc089 !default;
+// html, body
+$body-bg: #f9f2e8 !default;
+$body-color: #170000 !default;
+
+//font-size
+$title: 6rem !default;
+$sup-title: 3.5rem !default;
+
+@mixin titleStyle {
+    font-size: $title;
+    font-family: 'Noto Serif TC';
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+}
+
+@mixin sub-titStyle {
+    font-size: $sup-title;
+    font-family: 'Noto Serif TC';
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+}
+
+
+$borderColor:#e3c8c8 !default;

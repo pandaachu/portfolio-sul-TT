@@ -1,0 +1,507 @@
+.time-wrapper {
+  .time-kv {
+    .time-header {
+      .kvtop {
+        // opacity: 1;
+        // transition: all 0.8s;
+        .kv-logo {
+          position: absolute;
+          top: 11px;
+          left: 55px;
+          z-index: 2;
+          width: 11%;
+          max-width: 212px;
+          opacity: 1;
+          &:hover {
+            opacity: 0.8;
+          }
+          .pc {
+            display: block;
+          }
+          .logo-mb {
+            display: none;
+          }
+        }
+        .kv-nav {
+          position: absolute;
+          top: 60px;
+          right: 55px;
+          z-index: 200;
+          width: 50px;
+          height: 50px;
+          .inner {
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .kv-contact {
+          position: absolute;
+          top: 60px;
+          right: 140px;
+          z-index: 1;
+          a {
+            max-width: 24px;
+            display: block;
+            font-size: 3.8rem;
+            color: #fff;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+        &.on {
+          opacity: 1;
+          transition: all 0.8s;
+        }
+      }
+    }
+  }
+}
+
+.navigation_trigger {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  z-index: 1030;
+  -webkit-transition: all 0.2s cubic-bezier(0.18, 0.72, 0.61, 1.15);
+  transition: all 0.2s cubic-bezier(0.18, 0.72, 0.61, 1.15);
+  cursor: pointer;
+}
+.navigation_trigger .line1,
+.navigation_trigger .line2,
+.navigation_trigger .line3 {
+  position: absolute;
+  width: 48px;
+  height: 3px;
+  background-color: $deep-red;
+  left: 0px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+}
+.navigation_trigger .line1 {
+  top: 1px;
+}
+.navigation_trigger .line2 {
+  top: 20px;
+}
+.navigation_trigger .line3 {
+  top: 37px;
+}
+.navigation_trigger:hover .line1 {
+  width: 25px;
+  -webkit-transform: translate(0, 20px) rotate(-45deg);
+  -ms-transform: translate(0, 20px) rotate(-45deg);
+  transform: translate(0, 20px) rotate(-45deg);
+}
+.navigation_trigger:hover .line3 {
+  width: 25px;
+  -webkit-transform: translate(1px, -18px) rotate(45deg);
+  -ms-transform: translate(1px, -18px) rotate(45deg);
+  transform: translate(1px, -18px) rotate(45deg);
+}
+.navigation_trigger.nav_in {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+.menu {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: auto;
+}
+.menu.nav_in {
+  height: 100%;
+}
+.contents_nav {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.contents_nav.nav_in {
+  z-index: 1000;
+}
+.contents_nav.nav_in .nav_list {
+  opacity: 1;
+}
+.contents_nav .nav_close {
+  position: absolute;
+  top: 60px;
+  right: 55px;
+  width: 50px;
+  height: 50px;
+  z-index: 60;
+  cursor: pointer;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.2s cubic-bezier(0.18, 0.72, 0.61, 1.15);
+  transition: all 0.2s cubic-bezier(0.18, 0.72, 0.61, 1.15);
+}
+.contents_nav .nav_close .line1,
+.contents_nav .nav_close .line2 {
+  position: absolute;
+  width: 48px;
+  height: 3px;
+  background-color: $gold;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.contents_nav .nav_close .line1 {
+  top: 20px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.contents_nav .nav_close .line2 {
+  top: 20px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.contents_nav .nav_close:hover .line1,
+.contents_nav .nav_close:hover .line2 {
+  background-color: #fff;
+}
+.contents_nav .nav_close.nav_in {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.contents_nav .nav_close.nav_in_end:hover {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
+.contents_nav .nav_list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+  box-sizing: border-box;
+}
+.contents_nav .nav_list.nav_in {
+  opacity: 1;
+  margin: 10% auto 0;
+}
+.contents_nav .nav_list .item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+  a {
+    color: $gold;
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    font-size: 4rem;
+    font-family: "Noto Serif TC";
+    display: block;
+    letter-spacing: 0.1rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 10px;
+    padding: 0 0 60px;
+    background: url("../images/navbg.png") no-repeat bottom center;
+    background-size: 100%;
+    transition: all 0.3s;
+  }
+  a:hover {
+    color: #fff;
+    background: url("../images/navbg-hover.png") no-repeat bottom center;
+    background-size: 100%;
+    transition: all 0.3s;
+  }
+  &.privacyLink {
+    a {
+      font-size: 26px;
+      font-size: 2.6rem;
+    }
+  }
+}
+.nav_cover {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: -50%;
+  z-index: -1;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.nav_cover.nav_in {
+  height: 200%;
+  opacity: 0.8;
+  z-index: 50;
+}
+.navigation_off .contents_nav,
+.navigation_off .nav_cover {
+  display: none;
+}
+
+@media screen and (max-width: 1600px) {
+  .time-kv {
+    .time-header {
+      .kvtop {
+        .kv-nav {
+          width: 40px;
+          height: 40px;
+        }
+        .kv-contact {
+          a {
+            max-width: 20px;
+            font-size: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+  .navigation_trigger {
+    width: 40px;
+    height: 40px;
+  }
+  .navigation_trigger .line1,
+  .navigation_trigger .line2,
+  .navigation_trigger .line3 {
+    width: 40px;
+    height: 2px;
+  }
+  .navigation_trigger .line1 {
+    top: 1px;
+  }
+  .navigation_trigger .line2 {
+    top: 16px;
+  }
+  .navigation_trigger .line3 {
+    top: 30px;
+  }
+  .navigation_trigger:hover .line1 {
+    width: 22px;
+    transform: translate(0, 16px) rotate(-45deg);
+  }
+  .navigation_trigger:hover .line3 {
+    width: 22px;
+    transform: translate(1px, -14px) rotate(45deg);
+  }
+  .contents_nav .nav_close {
+    width: 40px;
+    height: 40px;
+  }
+  .contents_nav .nav_close .line1,
+  .contents_nav .nav_close .line2 {
+    width: 40px;
+    height: 2px;
+  }
+  .contents_nav .nav_list .item {
+    a {
+      font-size: 36px;
+      font-size: 3.6rem;
+      margin: 0 auto 10px;
+      padding: 0 0 50px;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .time-kv {
+    .time-header {
+      .kvtop {
+        .kv-logo {
+          top: 45px;
+          left: 45px;
+        }
+        .kv-nav {
+          top: 50px;
+          right: 45px;
+        }
+        .kv-contact {
+          top: 50px;
+          right: 130px;
+        }
+      }
+    }
+  }
+  .contents_nav .nav_close {
+    top: 50px;
+    right: 45px;
+  }
+  .contents_nav .nav_list.nav_in {
+    margin: 15% auto 0;
+  }
+  .contents_nav .nav_list .item {
+    a {
+      margin: 0 auto 10px;
+      padding: 0 0 60px;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .time-kv {
+    .time-header {
+      .kvtop {
+        .kv-logo {
+          top: 35px;
+          left: 55px;
+        }
+        .kv-nav {
+          top: 40px;
+          right: 35px;
+        }
+        .kv-contact {
+          top: 54px;
+          right: 110px;
+        }
+      }
+    }
+  }
+  .contents_nav .nav_close {
+    top: 40px;
+    right: 35px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .time-kv {
+    .time-header {
+      .kvtop {
+        .kv-logo {
+          top: 25px;
+          left: 25px;
+        }
+        .kv-nav {
+          top: 30px;
+          right: 25px;
+        }
+        .kv-contact {
+          top: 30px;
+          right: 100px;
+        }
+      }
+    }
+  }
+  .contents_nav .nav_close {
+    top: 30px;
+    right: 25px;
+  }
+}
+// mobile layout
+@media screen and (max-width: 768px) {
+  .time-wrapper {
+    .time-kv {
+      .time-header {
+        .kvtop {
+          .kv-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            max-width: 212px;
+          }
+          .kv-nav {
+            position: absolute;
+            top: 55px;
+            right: 55px;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            .inner {
+              overflow: hidden;
+              margin: 0 auto;
+              position: relative;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .kv-contact {
+            position: absolute;
+            top: 44px;
+            right: 110px;
+            z-index: 1;
+            a {
+              max-width: 24px;
+              display: block;
+              font-size: 3.8rem;
+              color: #fff;
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+          &.on {
+            opacity: 1;
+            transition: all 0.8s;
+          }
+        }
+      }
+    }
+  }
+}
+// iphone XS Max, Plus
+@media screen and (max-width: 414px) {
+  .time-wrapper {
+    .time-kv {
+      .time-header {
+        .kvtop {
+          .kv-logo {
+            max-width: 120px;
+          }
+          .kv-nav {
+            top: 40px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            .inner {
+              overflow: hidden;
+              margin: 0 auto;
+              position: relative;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .kv-contact {
+            top: 35px;
+            right: 90px;
+            z-index: 1;
+            a {
+              max-width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// iphone XS, iphone X
+@media screen and (max-width: 375px) {
+}

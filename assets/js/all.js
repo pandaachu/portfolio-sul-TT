@@ -182,8 +182,7 @@ function onYouTubePlayerAPIReady() {
   player = new YT.Player("ytplayer", {
     width: "100%",
     height: "100%",
-    // 這邊放video id
-    videoId: "CzTy-GD1LIo",
+    videoId: "3NycM9lYdRI",
     events: {
       onReady: onPlayerReady,
       onStateChange: onPlayerStateChange
